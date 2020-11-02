@@ -4,7 +4,7 @@ from tkinter import messagebox
 board=Tk()
 board.geometry('700x750')
 board.title('Tic Tac Toe')
-board.configure(bg='pink')
+board.configure(bg='white')
 #board.iconbitmap('C:/Users/new/Downloads/tic-tac-toe_39453.ico')
 
 global x
@@ -37,7 +37,7 @@ def rematch():
 
 
 #Names frame
-names=LabelFrame(board,padx=10,pady=10,bg='orange',bd=0)
+names=LabelFrame(board,padx=10,pady=10,bd=0)
 names.pack(padx=10,pady=5)
 
 
@@ -194,17 +194,17 @@ def pos(num):
 
 
 # names of the players
-Label(names,text='Enter Player 1 Name:',fg='green',font=('sans-serif',20),bg='orange').pack(pady=10)
+Label(names,text='Enter Player 1 Name:',fg='green',font=('sans-serif',20)).pack(pady=10)
 p1=Entry(names,bd=0,bg='yellow',font=('sans-serif',20))
 p1.pack()
-Label(names,text='Enter Player 2 Name:',fg='green',font=('sans-serif',20),bg='orange').pack(pady=10)
+Label(names,text='Enter Player 2 Name:',fg='green',font=('sans-serif',20)).pack(pady=10)
 p2=Entry(names,bd=0,bg='yellow',font=('sans-serif',20))
 p2.pack()
-Button(names,text='Start',fg='white',bg='green',bd=0,font=('sans-serif',20),command=play).pack(pady=10)
+Button(names,text='Start',fg='white',bg='black',bd=0,font=('sans-serif',20),command=play).pack(pady=10)
 
 
 # warning message
-warning=Label(names,text='',fg='red',font=('sans-serif',15),bg='orange')
+warning=Label(names,text='',fg='red',font=('sans-serif',15))
 warning.pack(pady=10)
 
 color='white'
@@ -228,10 +228,10 @@ h.grid(pady=5,row=2,padx=5,column=1)
 i=Button(game,text='',font=('sans-serif',20),width=6,height=3,bd=0,bg=color,command=lambda:pos(9))
 i.grid(pady=5,row=2,padx=5,column=2)
 
-new_game=Button(buttons,text='NEW GAME',bg='green',fg='white',command=new_game,bd=0,font=('sans-serif',20))
+new_game=Button(buttons,text='NEW GAME',bg='black',fg='white',command=new_game,bd=0,font=('sans-serif',20))
 new_game.grid(row=0,column=0,padx=10)
 
-rematch=Button(buttons,text='REMATCH',bg='green',fg='white',command=rematch,bd=0,font=('sans-serif',20))
+rematch=Button(buttons,text='REMATCH',bg='black',fg='white',command=rematch,bd=0,font=('sans-serif',20))
 rematch.grid(row=0,column=2,padx=10)
 
 board.mainloop()
